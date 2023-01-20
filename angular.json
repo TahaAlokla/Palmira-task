@@ -28,9 +28,25 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/components/side-menu.css",
+              "src/assets/css/components/color-picker.css",
+              "src/assets/css/components/items.css",
+              "src/assets/css/components/map-list.css",
+              "src/assets/css/components/canvas-tree.css",
+              "src/assets/css/components/side-modal.css",
+              "src/assets/css/components/tree.css",
+              "src/assets/css/components/header.css",
+              "src/assets/css/components/menu.css",
+              "src/assets/css/select2.min.css",
+              "src/assets/css/OverlayScrollbars.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/overlayScrollbars/OverlayScrollbars.min.js",
+              "src/assets/js/scripts.js"
+
+            ]
           },
           "configurations": {
             "production": {
@@ -103,5 +119,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

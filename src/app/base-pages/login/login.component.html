@@ -1,0 +1,81 @@
+<div class="container-fluid m-0 p-0 bage-container">
+  <div class="row d-flex justify-content-center align-items-center vw-100 vh-100 m-0 p-0 ">
+    <div class="col-11 col-md-8 col-lg-6 ">
+
+      <div *ngIf="msgErrorLogin"
+
+           class="alert alert-warning alert-dismissible fade show"
+           role="alert">
+        {{msgErrorLogin}}
+
+        <button type="button"
+                class="close"
+                data-dismiss="alert"
+                aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="card border border-info row card-box shadow">
+
+        <div class="bg-primary col-12">
+          <h4 class=" text-center fw-bold py-3  text-white ">
+            {{"base_page.login"|translate}}
+          </h4>
+        </div>
+        <form class="col-12"
+              [formGroup]="loginUser"
+              (ngSubmit)="loginUserSubmit()">
+          <div class="form-group my-2 h-25">
+            <label for="exampleInputEmail1">{{"base_page.email"|translate}}</label>
+            <input type="email"
+                   id="exampleInputEmail1"
+                   formControlName="email"
+                   class=" form-control d-block"
+                   placeholder='{{"base_page.enter_email"|translate}}'
+                   [class.is-invalid]="loginUser.get('email')?.invalid&&loginUser.get('email')?.touched">
+            <div class=""
+                 *ngIf="loginUser.get('email')?.invalid&&loginUser.get('email')?.touched">
+              <small *ngIf="loginUser.controls.email.errors?.['required']"
+                     id="emailHelp"
+                     class="form-text  error-msg"> {{'base_page.required'|translate}}</small>
+              <small *ngIf="loginUser.controls.email.errors?.['email']"
+                     id="emailHelp"
+                     class="form-text  error-msg"> {{'base_page.email_pattern'|translate}}</small>
+            </div>
+
+          </div>
+          <div class="form-group my-2 filed-h">
+            <label>{{"base_page.password"|translate}}</label>
+            <input type="password"
+                   [class.is-invalid]="loginUser.get('password')?.invalid&&loginUser.get('password')?.touched"
+                   class=" form-control d-block"
+                   placeholder='{{"base_page.enter_password"|translate}}'
+                   formControlName="password">
+            <div class=""
+                 *ngIf="loginUser.get('password')?.invalid&&loginUser.get('password')?.touched">
+              <small *ngIf="loginUser.controls.password.errors?.['required']"
+                     id="emailHelp"
+                     class="form-text  error-msg"> {{'base_page.required'|translate}}</small>
+
+            </div>
+
+          </div>
+
+
+
+
+          <div class="my-4 d-flex justify-content-center ">
+            <button class="btn btn-primary w-50 fw-bold "
+                    type="submit"
+                    [disabled]="loginUser.invalid||isLoading">
+              {{'base_page.login'|translate}}
+            </button>
+          </div>
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+</div>

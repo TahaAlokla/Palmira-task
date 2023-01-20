@@ -1,0 +1,65 @@
+<div class="row mb-3">
+  <div class="col-md-2 col-sm-12 mb-0 pr-md-0">
+    <ul class="nav nav-pills flex-column side-tabs"
+        id="myTab"
+        role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active"
+
+          [routerLink]="['./info-tab']"
+           role="tab"
+           aria-controls="info"
+           aria-selected="true">Hierarchy info</a>
+      </li>
+      <li class="nav-item">
+        <!-- user-tab -->
+        <!--  -->
+        <a class="nav-link"
+           data-toggle="tab"
+           [routerLink]="['./user-tab']"
+           role="tab"
+           aria-controls="user"
+           aria-selected="true">User defined</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab"
+           [routerLink]="['./responsibilities-tab']"
+           role="tab"
+           aria-controls="home"
+           aria-selected="true">Responsibilities</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab"
+           [routerLink]="['./subordinates-tab']"
+           role="tab"
+           aria-controls="home"
+           aria-selected="true">Subordinates</a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab"
+           [routerLink]="['./profile-tab']"
+           role="tab"
+           aria-controls="profile"
+           aria-selected="false">Linked Objects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab"
+           [routerLink]="['./home-tab']"
+           role="tab"
+           aria-controls="home"
+           aria-selected="true">Linked KPI's</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-10 col-sm-12">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+{
+  "base_page": {
+    "login": "login",
+    "required": "This field is required",
+    "email":"Email ",
+    "enter_email":"Enter Your Email please",
+    "password":"Password",
+    "enter_password":"Enter Your Password",
+    "email_pattern" : "Invalid email format",
+    "page404":"The page you are looking for was not found.",
+    "back":"Return to the previous page"
+  }
+}

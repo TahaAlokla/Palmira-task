@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="container-fluid main">
+  <overlay-scrollbars  [options]="{ scrollbars: { autoHide: 'scroll' } }"
+ >
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-2 mb-3">
+        <app-side-menu></app-side-menu>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-10 mb-3">
+        <div class="row">
+          <div class="col-sm-12">
+            <app-breadcrumb></app-breadcrumb>
+          </div>
+        </div>
+        <div class=" statistics-data">
+          <app-statistics-data></app-statistics-data>
+        </div>
+        <div class="row mb-3">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+           <app-side-table-section></app-side-table-section>
+          </div>
+          <div class="col-md-10 col-sm-12">
+
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-sm-12">
+              <button type="button" class="btn icon-btn advance-search float-right ml-3 btn-width" data-toggle="collapse" data-target="#advanceSearch" aria-expanded="true">
+                  Edit
+              </button>
+          </div>
+      </div>
+
+      </div>
+    </div>
+  </overlay-scrollbars>
+
+</div>
+
